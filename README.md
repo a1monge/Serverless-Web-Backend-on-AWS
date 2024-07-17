@@ -4,9 +4,13 @@
 
 This project demonstrates a serverless web backend architecture using various AWS services. The architecture is designed to handle spikes in demand efficiently and ensure decoupled application components. The solution was implemented for a hypothetical customer who sells cleaning supplies and experiences fluctuating web traffic.
 
+## Architecture
+
+![Architecture Diagram](architecture/DIagram.png)
+
 The architecture involves:
 - Using a REST API to place entries into an Amazon SQS queue.
-- Triggering AWS Lambda functions to process the entries and store them in an Amazon DynamoDB table.
+- Triggering AWS Lambda functions to process and store the entries in an Amazon DynamoDB table.
 - Capturing database modifications with DynamoDB Streams.
 - Using another Lambda function to send notifications via Amazon SNS.
 
