@@ -6,7 +6,7 @@ This project demonstrates a serverless web backend architecture using various AW
 
 ## Architecture
 
-![Architecture Diagram](architecture/Diagram.png)
+![Architecture Diagram](architecture/DIagram.png)
 
 The architecture involves:
 - Using a REST API to place entries into an Amazon SQS queue.
@@ -49,7 +49,9 @@ Two AWS Lambda functions were implemented:
 - **POC-Lambda-1**: Reads messages from SQS and writes order records to DynamoDB.
 - **POC-Lambda-2**: Uses DynamoDB Streams to trigger when a new record is added and sends a notification via SNS.
 
-![Lambda1](Screenshots/POC-Lambda-2.png)
+![Lambda1](Screenshots/POC-Lambda-1.png)
+
+![Lambda2](Screenshots/POC-Lambda-2.png)
 
 ### 5. DynamoDB Streams
 DynamoDB Streams were enabled to capture modifications in the `orders` table and trigger the second Lambda function.
