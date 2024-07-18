@@ -6,7 +6,7 @@ This project demonstrates a serverless web backend architecture using various AW
 
 ## Architecture
 
-![Architecture Diagram](architecture/DIagram.png)
+![Architecture Diagram](architecture/ynamoDB.png)
 
 The architecture involves:
 - Using a REST API to place entries into an Amazon SQS queue.
@@ -35,6 +35,7 @@ Custom IAM policies and roles were created to follow best practices and provide 
 ### 2. DynamoDB Table
 An Amazon DynamoDB table named `orders` was created to store order data, with `orderID` as the partition key.
 
+![DynamoDB](Screenshots/DynamoDB.png)
 ### 3. SQS Queue
 An Amazon SQS queue named `POC-Queue` was set up to receive data from the API Gateway.
 
